@@ -1,0 +1,24 @@
+.hp-container{
+    padding-left: 16px;
+    padding-right: 16px;
+    align-content: center;
+}
+.h1-centered{
+    text-align: center;
+}
+.child{
+    text-align: center;
+    list-style-position: inside;
+}
+body{
+    background-color: #C2CAD0;
+}
+.header {
+    background-color: #E77170;
+}
+.main{
+    background-color: #C2CAD0 #E77170;
+}
+.footer{
+    background-color: #E77170 #C2CAD0;
+}
