@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 08 Coding Exercises</title>
+</head>
+<body>
+
+    <p>Check the console for the magic....</p>
+
+    <script>
+       //Arrays
+        topScope.array = (...values) => values;
+        topScope.length = array => array.length;
+        topScope.element = (array, i) => array[i];
+        run(`
+        do(define(sum, fun(array,
+        do(define(i, 0),
+            define(sum, 0),
+            while(<(i, length(array)),
+            do(define(sum, +(sum, element(array, i))),
+                define(i, +(i, 1)))),
+            sum))),
+            print(sum(array(1, 2, 3))))
+        `);
+        // → 6
+
+        //Display comments
+        function skipSpace(string) {
+            let skippable = string.match(/^(\s|#.*)*/);
+            return string.slice(skippable[0].length);
+          }
+          
+          console.log(parse("# hello\nx"));
+          // → {type: "word", name: "x"}
+          
+          console.log(parse("a # one\n   # two\n()"));
+          // → {type: "apply",
+          //    operator: {type: "word", name: "a"},
+          //    args: []}
+
+    </script>
+    
+</body>
+</html>
