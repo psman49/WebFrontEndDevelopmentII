@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <title>Week09</title>
+</head>
+<body>
+    <h2>Week 09</h2>
+    <ul>
+        <li><a href="./codingPractice/index.html">Coding Practice</a></li>
+        <li><a href="./TeamActivity/index.html">Team Activity</a></li>
+        <li><a href="">Week 09 Notes/Exercises</a></li>
+    </ul>
+    <pre>
+        <strong>HTML5 API</strong>
+        The data- Attribute.
+        The data- attribute  is a way of embedding data in a web page using custom attributes that are ignored by the browser. 
+        They’re also private to a page, so are not intended to be used by an external service – their sole purpose is to be used by a JavaScript program. 
+        This means they’re perfect for adding data that can be used as a hook that the program utilizes to access information about a particular element on the page.
+
+        The names of these attributes can be decided by the developer, but they must use the following format:
+
+        Start with data-.
+
+        Contain only lowercase letters, numbers, hyphens, dots, colons or underscores.
+
+        Include an optional string value.
+
+        Examples could be:
+
+        data-powers = 'flight superSpeed'
+        data-rating = '5' 
+        data-dropdown 
+        data-user = 'DAZ' 
+        data-max-length = '32'
+
+        The information contained in the attributes can be used to identify particular elements. For example, all the elements with an attribute of data-dropdown could be 
+        identified as dropdown menu. The values of the attributes can also be used to filter different elements.
+         For example, we could find all the elements that have a data-rating value of 3 or more.
+
+         Each element has a dataset property that can be used to access any data- attributes it contains. 
+         Here’s an example of some markup:
+            <!-- <div id='hero' data-powers='flight superSpeed'>
+                Superman
+            </div> -->
+        The data-powers attribute can be accessed using the following code:
+        const superman = document.getElementById('hero');
+        const powers = superman.dataset.powers;
+        << 'flight superSpeed'
+
+        Notice that the data- prefix is dropped. To access the attribute, powers is used as if it’s a property of the dataset object. 
+        If a data- attribute’s name contains hyphens, they are replaced with camel-case notation, 
+        so data-max-length would be accessed using dataset.maxLength.
+
+        The restriction of only using a string value can be overcome by encoding any JavaScript object or value as a JSON string, then performing type-conversion later, 
+        as required. For example, the value of data-max-length will return a string, but can easily be converted into a number using the following code:
+
+        const maxLength = Number(element.dataset.maxLength);
+
+        <strong>HTML5 Web Storage</strong>
+        With web storage, web applications can store data locally within the user's browser.
+        Before HTML5, application data had to be stored in cookies, included in every server request. Web storage is more secure, and large amounts of data can be stored locally, without affecting website performance.
+        Unlike cookies, the storage limit is far larger (at least 5MB) and information is never transferred to the server.
+        Web storage is per origin (per domain and protocol). All pages, from one origin, can store and access the same data
+
+        <strong>Web Storage Objects</strong>
+        HTML web storage provides two objects for storing data on the client:
+            ->window.localStorage - stores data with no expiration date
+            ->window.sessionStorage - stores data for one session (data is lost when the browser tab is closed)
+
+        Before using web storage, check browser support for localStorage and sessionStorage:
+
+        if (typeof(Storage) !== "undefined") {
+            // Code for localStorage/sessionStorage.
+          } else {
+            // Sorry! No Web Storage support..
+          }
+
+        <strong>localStorage Object</strong>
+        he localStorage object stores the data with no expiration date. The data will not be deleted when the browser 
+        is closed, and will be available the next day, week, or year.
+
+        For Example:
+        // Store -> Create a localStorage name/value pair with name="lastname" and value="Smith"
+        localStorage.setItem("lastname", "Smith");
+
+       // Retrieve -> Retrieve the value of "lastname" and insert it into the element with id="result"
+       document.getElementById("result").innerHTML = localStorage.getItem("lastname");  
+       
+       The example above could also be written like this:
+       // Store
+        localStorage.lastname = "Smith";
+      // Retrieve
+        document.getElementById("result").innerHTML = localStorage.lastname;
+
+      //how to delete the "lastname" localStorage item is as follows:
+      localStorage.removeItem("lastname");
+        
+      Note: Name/value pairs are always stored as strings. Remember to convert them to another format when needed!
+
+      <strong>The sessionStorage Object</strong>
+      The sessionStorage object is equal to the localStorage object, except that it stores the data for only one session. 
+      The data is deleted when the user closes the specific browser tab.
+      The following example counts the number of times a user has clicked a button, in the current session:
+
+
+      
+
+       
+       
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+    </pre>
+    
+</body>
+</html>

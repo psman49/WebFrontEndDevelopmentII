@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week09</title>
+</head>
+<body>
+    <h3>Exercises for local storage object  and Session Object storage</h3>
+    <p>The following code counts the number of times a user has clicked a button. 
+    In this code the value string is converted to a number to be able to increase the counter:</p>
+
+    <strong>local storage object </strong>
+    <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+    <div id="result"></div>
+    <p>Click the button to see the counter increase.</p>
+    <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+
+    <strong>sessionStorage Object</strong>
+    <p><button onclick="clickUpCounter()" type="button">Click me!</button></p>
+    <div id="result1"></div>
+    <p>Click the button to see the counter increase.</p>
+    <p>Close the browser tab (or window), and try again, and the counter is reset.</p>
+
+    <script>
+        function clickCounter() {
+            if (typeof(Storage) !== "undefined") {
+              if (localStorage.clickcount) {
+                localStorage.clickcount = Number(localStorage.clickcount)+1;
+              } else {
+                localStorage.clickcount = 1;
+              }
+              document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+            } else {
+              document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+          }
+
+          function clickUpCounter() {
+            if (typeof(Storage) !== "undefined") {
+              if (sessionStorage.clickcount) {
+                sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+              } else {
+                sessionStorage.clickcount = 1;
+              }
+              document.getElementById("result1").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+            } else {
+              document.getElementById("result1").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+          }
+
+    </script>
+    
+</body>
+</html>

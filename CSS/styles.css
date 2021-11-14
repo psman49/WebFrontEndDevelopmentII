@@ -1,7 +1,7 @@
 .hp-container{
     padding-left: 16px;
     padding-right: 16px;
-    align-content: center;
+    align-content:flex-start;
 }
 .h1-centered{
     text-align: center;
@@ -12,6 +12,7 @@
 }
 body{
     background-color: #C2CAD0;
+    align-content: center;
 }
 .header {
     background-color: #E77170;

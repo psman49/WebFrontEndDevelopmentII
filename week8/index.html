@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/styles.css">
     <title>Week 08 </title>
-
 </head>
 <body>
     <h2>Week 08</h2>
@@ -15,9 +14,69 @@
         <li><a href="/week8/TeamActivity/swapi.html">Team Activity</a></li>
         <li><a href="">Week 08 Notes/Exercises</a></li>
     </ul>
-    <section>
-        
-    </section>
+    <pre>
+        <strong>Strict Mode</strong>
+        How does using Strict Mode defer from just using typescript since in typescript you have to set types for any variable and function?
+
+        For example, consider the following code, which calls a constructor function without the new keyword so that its this will not refer to a newly constructed object:
+        function Person(name) { this.name = name; }
+        let ferdinand = Person("Ferdinand"); // oops
+        console.log(name);
+        // → Ferdinand
+        So the bogus call to Person succeeded but returned an undefined value and created the global binding name. In strict mode, the result is different.
+
+        "use strict";
+        function Person(name) { this.name = name; }
+        let ferdinand = Person("Ferdinand"); // forgot new
+        // → TypeError: Cannot set property 'name' of undefined
+
+        For this instance using the strict mode, if we edited our code and added the new keyword then it would work and we wouldnt get the type error.
+
+        "use strict";
+        function Person(name) { this.name = name; }
+        let ferdinand = new Person("Ferdinand"); // forgot new
+        // → Ferdinand
+
+        <strong>Debugging</strong>
+        In the textbook they go over using console.log() to learn how to see how far your code has gone when you invoke the function you
+        wanting to get a result on. So console.log() will return some data for you to see.
+
+        On this very topic I spent some time learning how to use the debugger in vscode mostly when I was working on my javascript.
+        Follow the following steps to get it activated.
+            ->Pressing F5 (Start Debugging)
+            ->Activating the debug icon in the menu bar and selecting "Run and debug"
+            ->Opening the Visual Studio Code command palette and running the "Debug: Open Link command"
+
+        <strong>Exceptions</strong>
+        The beauty of exceptions is that even if the code runs into issues you are able to see an error that was caught and the 
+        program will still continue to run instead of just ending. This makes me appreciate the beauty of asynchronous programming as well
+        because you can learn how to structure with this concept and on top of it work with exceptions as you try the block of code and catch if any 
+        errors come up.
+
+        Here's an example of an exception.
+        function promptDirection(question) {
+            let result = prompt(question);
+            if (result.toLowerCase() == "left") return "L";
+            if (result.toLowerCase() == "right") return "R";
+            throw new Error("Invalid direction: " + result);
+          }
+          
+          function look() {
+            if (promptDirection("Which way?") == "L") {
+              return "a house";
+            } else {
+              return "two angry bears";
+            }
+          }
+          
+          try {
+            console.log("You see", look());
+          } catch (error) {
+            console.log("Something went wrong: " + error);
+          }
+
+        Every programmer makes mistakes so using these exceptions prepares one to catch any errors that might comeup.   
+    </pre>
 
     
 </body>

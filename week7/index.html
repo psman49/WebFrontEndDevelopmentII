@@ -8,50 +8,39 @@
     <title>Week 07</title>
 </head>
 <body>
+    <h1>Week07</h1>
     <ul>
         <li><a href="./codingPractice/index.html">Coding Practice</a></li>
         <li><a href="/week7/TeamActivity/hike.html">Team Activity</a></li>
         <li><a href="">Week 07 Notes/Exercises</a></li>
         </ul>
-    <section>
-        <br>
+    <pre>
         One can use the call() method to set the value of ‘this’ inside a function to an object that is provided as the first argument.
-        <br>
-        function sayHello(){ <br>
+        
+        function sayHello(){ 
             return `Hello, my name is ${ this.name }`;}
-            <br>
-        const clark = { name: 'Clark' };<br>
-        const bruce = { name: 'Bruce' };<br>
-        sayHello.call(clark);<br>
-        << 'Hello, my name is Clarke'<br>
+            
+        const clark = { name: 'Clark' };
+        const bruce = { name: 'Bruce' };
+        sayHello.call(clark);
+        << 'Hello, my name is Clarke'
         sayHello.call(bruce);<br>
-        << 'Hello, my name is Bruce'<br>
-        <br>
-        <br>
+        << 'Hello, my name is Bruce'
+
         Custom properties is something that I thought was really cool to learn about because I feel like
-        <br>
         now its going to help me elevate my programming skills. Whereby I can add a description of what I am intending to do in that function.
-        <br>
-        <br>
         However, why use the description property yet you could just use a comment block to explain what you are doing?
-        <br>
-        <h4>Couldn’t quite understand the use of Immediately invoked function expressions?</h4> 
-        Asynchronous programming seems to be such a solution in cases where one might want to have a bunch of things running however one<br>
+        <strong>Couldn’t quite understand the use of Immediately invoked function expressions?</strong> 
+        Asynchronous programming seems to be such a solution in cases where one might want to have a bunch of things running however one
          must carefully avoid creating a callback Hell while working with call back functions.
         Settle Promise => (resolve, rejected) both these outcomes will return data that you will have to work with based on your desired need.
-        <br>
+        
         Using async functions is golden because now I can see how if an error happens then it is thrown and once can easily know what they are dealing with.
-        <br>
-        Closures => Secret to giving access to global variables to functions that are called within other functions.<br>
-        Functional programming-> working with pure functions-> the return value only depends on the arguments provided, <Br>
+      
+        Closures => Secret to giving access to global variables to functions that are called within other functions.
+        Functional programming-> working with pure functions-> the return value only depends on the arguments provided, 
         they don’t change any data in the program, always return the same results given the same arguements
-
-
-
-
-
-
-    </section>
+        </pre>
     
 </body>
 </html>
