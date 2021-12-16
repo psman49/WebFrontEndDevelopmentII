@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Project Description</title>
+</head>
+<body>
+    <h1>Description of Personal Project- Weather App</h1>
+    <pre>
+        I chose to build a weather app for my personal project because I am blessed to live in the state of Utah 
+        where we get to witness all the weather seasons throughout the year.The app has a search area where you 
+        can type in any city in the world and see the weather for that city. I also dessigned it so that it is simple
+        for anyone to use.
+    </pre>
+    <h2>How to use the Weather App</h2>
+    <pre>
+        In that search area, where you see the word "search", type in any name of the city you want to check the weather
+        for in the world. Let us say for example Sandy, you will then hit the search icon to your right, it looks like a 
+        tiny frying pan. Once you hit that button, it will bring up the weather results of sandy at that current time.
+        It will display the name of the city, how cold it is in Celcius and give a weather description, if it is snowing, 
+        sunny, rainny or overcast. You will be able to see the humidity and wind speed of that city as well.
+    </pre>
+    <h2>Javascript used in my project</h2>
+    <pre>
+        API- I used the open weather map api(https://openweathermap.org/api) to be fetch the current data weather for any given city.
+        I used the fetch method (fectch()) to be to fetch the resouces(city weather) asynchronously across the network.
+        With fetch() api we get a a json response and if you are to console.log it you see that there is all this data we can extract 
+        out of this response. In my code you can see the I use destructuring assignment syntax to unpack the name,icon,description,humidity 
+        and wind speed for the given city.
+    </pre>
+    <h2>Third-Party APIs</h2>
+    <pre>
+        I used the openweather map API and with the usage of the fetch() I passed in the url -> https://api.openweathermap.org/data/2.5/weather?q=" +
+        city + "&units=metric&appid=" + this.apiKey. Where you clearly see that i use an apikey, I got when i signed up and from the url you can see
+        with the logic of destructing, I was able to unpack the city from the json that we get back when we hit the /weather endpoint and pass 
+        in the respective parameters like city, name and api key to retrieve the current weather data for a given city.
+    </pre>
+    <h2>JSON</h2>
+    <pre>
+        The response that is got back as asynchronous api call is made with the fetch(), we get back a reponse and if ok,we get the json object data 
+        which I unpack using the destructing syntax so that I can extract the data for the city, description, name,speed, temperature and humidity.
+        All of this is found in the script.js file.
+    </pre>
+    <h2>Events</h2>
+    <pre>
+        You can see that I use the addEventListener, which listens to a click and executes the function to do a weather search.
+        And clearly if a response is matched with the city name after the api call is made, we see current weather data for that city
+        displayed.
+    </pre>
+    <h2>CSS Features Used include the following:</h2>
+        <ul>
+            <li>The :hover pseudo-class selector for the buttons</li>
+            <li>Used different classes </li>
+            <li>Different styles for sizing and positioning input fields and their labels</li>
+            <li>Used different fonts at different places on my application </li>
+            <li>Used the unsplash source rotating backgroung images that change for each respective city </li>
+          </ul>
+    <h2></h2>
+    <h2>Application of Topics from WDD330</h2>
+    <ul>
+        <li>CMobile-first design from the "Master Mobile UX" video from Week 1</li>
+       <li>Don't Repeat Yourself (DRY) principle from Week 2's Team Activity particularly in my script.js</li>
+       <li>The principles and techniques for testing and debugging from Week 5 were used throughout the duration of the project</li>
+       <li>The RESTful fetch() call to the open weather API was taken nearly verbatim from the Week 11 Team activity/li>
+       <li>Form and object-oriented programming (OOP)</li>
+     </ul> 
+    
+</body>
+</html>
