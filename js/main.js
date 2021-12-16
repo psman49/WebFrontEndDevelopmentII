@@ -34,9 +34,8 @@ const links = [
     {label: "Week10", 
     url:"week10/index.html"
     },
-    {label: "Weather App", 
-    url:"weatherapp/index.html"
-    }
+    {label: "Final Project",
+    url:"finalproject/index.html"}
 ]
 
 
